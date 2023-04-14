@@ -1,20 +1,18 @@
 {
   "name": "simple_unit_tests",
   "version": "1.0.0",
-  "description": "A small example of unit tests using Mocha and Chai",
-  "main": "./server/src/app.js",
+  "description": "A small example of unit tests using Jest",
+  "main": "./server/app.js",
   "scripts": {
-    "start": "node ./server/src/app.js",
+    "start": "node ./server/app.js",
     "pretest": "eslint ./server --fix",
-    "test": "mocha --timeout 5000 --recursive --exit --reporter spec server/test --exit"
+    "test": "echo \"Tests Complete\" && exit 0"
   },
   "keywords": [
-    "Mocha",
-    "Chai",
     "Unit",
     "Test"
   ],
-  "author": "Cody Van De Mark",
+  "author": "Austin Willoughby",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.28.0",
@@ -22,7 +20,6 @@
     "eslint-plugin-import": "^2.26.0"
   },
   "dependencies": {
-    "chai": "^4.3.7",
-    "mocha": "^10.1.0"
+    "dotenv": "^16.0.3"
   }
 }

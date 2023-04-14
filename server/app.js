@@ -1,11 +1,12 @@
+require('dotenv').config();
 const http = require('http');
-const utils = require('./utils'); // grab utils for simple math functions
+const mathUtils = require('./utils/math.js'); // grab utils for simple math functions
 
 const port = 3000;
 
 const onRequest = (req, res) => {
-  let num = utils.add(10, 15); // should get capped to 20
-  num -= utils.sub(10, 5); // should subtract the total of 10-5 from 20, giving 15
+  let num = mathUtils.add(10, 15); // should get capped to 20
+  num -= mathUtils.sub(10, 5); // should subtract the total of 10-5 from 20, giving 15
 
   const message = `Total was ${num}`;
 
